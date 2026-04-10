@@ -14,6 +14,8 @@ int main(){
 
     int guessNumber;
 
+    int counter = 1;
+
     std::cout << fmt::format("Guess the number (between {} and {})", minValue, maxValue) << std::endl;
     std::cin >> guessNumber;
 
@@ -22,15 +24,17 @@ int main(){
         if (guessNumber < secretNumber)
         {
             std::cout << "Higher..." << std::endl;
+            counter += 1;
             std::cin >> guessNumber;
         } else if (guessNumber > secretNumber)
         {
             std::cout << "Lower..." << std::endl;
+            counter += 1;
             std::cin >> guessNumber;
         }
     
     }
     
-    std::cout << fmt::format("You found it. The secet number was {}", secretNumber) << std::endl;
+    std::cout << fmt::format("You found it in {} tries. The secet number was {}", counter, secretNumber) << std::endl;
     return 0;
 }

@@ -16,10 +16,7 @@ std::cout << fmt::format("Guess the number (between {} and {})", minValue, maxVa
 # Compile
 
 ```bash
-clang++ -std=c++20 guess.cpp \
-  -I/opt/homebrew/include \
-  -L/opt/homebrew/lib \
-  -lfmt -o guess
+clang++ -std=c++20 guess.cpp -I/opt/homebrew/include -L/opt/homebrew/lib -lfmt -o guess
 ```
 
 # Run
