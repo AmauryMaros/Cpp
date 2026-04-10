@@ -1,13 +1,11 @@
+#include <fmt/core.h>
 #include <iostream>
 #include <random> 
-
-using namespace std;
 
 int main(){
 
     // Define variables
-    int minValue = 0;
-    int maxValue = 100;
+    int minValue = 0, maxValue = 100;
 
     std::random_device rd;                                      // 1. Obtain a seed from hardware to initialize the generator
     std::mt19937 gen(rd());                                     // 2. Choose a generator engine (Mersenne Twister is standard)
@@ -16,23 +14,23 @@ int main(){
 
     int guessNumber;
 
-    cout << "Guess the number (between " << minValue << " and " << maxValue << ")" << endl;
-    cin >> guessNumber;
+    std::cout << fmt::format("Guess the number (between {} and {})", minValue, maxValue) << std::endl;
+    std::cin >> guessNumber;
 
     while (guessNumber != secretNumber)
     {
         if (guessNumber < secretNumber)
         {
-            cout << "Higher..." << endl;
-            cin >> guessNumber;
+            std::cout << "Higher..." << std::endl;
+            std::cin >> guessNumber;
         } else if (guessNumber > secretNumber)
         {
-            cout << "Lower..." << endl;
-            cin >> guessNumber;
+            std::cout << "Lower..." << std::endl;
+            std::cin >> guessNumber;
         }
     
     }
     
-    cout << "You found it. The secet number was " << secretNumber << endl;
+    std::cout << fmt::format("You found it. The secet number was {}", secretNumber) << std::endl;
     return 0;
 }
