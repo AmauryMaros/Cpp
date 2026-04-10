@@ -69,16 +69,20 @@ int main() {
     switch (operatorChar){
         case '+':
             result = num1 + num2;
+            break;
         case '-':
             result = num1 - num2;
+            break;
         case '*':
             result = num1 * num2;
+            break;
         case '/':
             if (num2 == 0){
                 cout << "Division by 0 impossible" << endl;
                 return 0;
             }
             result = num1 / num2;
+            break;
     }
 
     // print out result
