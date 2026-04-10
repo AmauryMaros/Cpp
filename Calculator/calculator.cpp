@@ -49,21 +49,36 @@ int main() {
     }
 
     // Do the maths
-    if (operatorChar == '+'){
-        result = num1 + num2;
-    } else if (operatorChar == '-')
-    {
-        result = num1 - num2;
-    } else if (operatorChar == '/')
-    {
-        if (num2 == 0){
-            cout << "Division by 0 impossible" << endl;
-            return 0;
-        }
-        result = num1 / num2;
-    } else if (operatorChar == '*')
-    {
-        result = num1 * num2;
+    // if (operatorChar == '+'){
+    //     result = num1 + num2;
+    // } else if (operatorChar == '-')
+    // {
+    //     result = num1 - num2;
+    // } else if (operatorChar == '/')
+    // {
+    //     if (num2 == 0){
+    //         cout << "Division by 0 impossible" << endl;
+    //         return 0;
+    //     }
+    //     result = num1 / num2;
+    // } else if (operatorChar == '*')
+    // {
+    //     result = num1 * num2;
+    // }
+    // Do the maths with switch
+    switch (operatorChar){
+        case '+':
+            result = num1 + num2;
+        case '-':
+            result = num1 - num2;
+        case '*':
+            result = num1 * num2;
+        case '/':
+            if (num2 == 0){
+                cout << "Division by 0 impossible" << endl;
+                return 0;
+            }
+            result = num1 / num2;
     }
 
     // print out result
