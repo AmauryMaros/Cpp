@@ -24,12 +24,12 @@ int main(){
         if (guessNumber < secretNumber)
         {
             std::cout << "Higher..." << std::endl;
-            counter += 1;
+            counter++;
             std::cin >> guessNumber;
         } else if (guessNumber > secretNumber)
         {
             std::cout << "Lower..." << std::endl;
-            counter += 1;
+            counter++;
             std::cin >> guessNumber;
         }
     
