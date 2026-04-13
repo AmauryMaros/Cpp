@@ -17,7 +17,7 @@ int main(){
     int guessLimit = 6;
     bool runGuess = true;
 
-    std::cout << fmt::format("Guess the number (between {} and {}). You have {} tries. {}", minValue, maxValue, guessLimit, secretNumber) << std::endl;
+    std::cout << fmt::format("Guess the number (between {} and {}). You have {} tries. {}", minValue, maxValue, guessLimit) << std::endl;
     std::cin >> guessNumber;
 
     while (guessNumber != secretNumber && runGuess)
